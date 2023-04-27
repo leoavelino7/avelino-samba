@@ -1,0 +1,13 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "volta": {
+    "node": "18.16.0",
+    "yarn": "1.22.19"
+  }
+}
