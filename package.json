@@ -9,8 +9,7 @@
   "dependencies": {
     "@avelino-samba/lint-config": "*",
     "@avelino-samba/tsconfig": "*",
-    "@avelino-samba/utils": "*",
-    "@avelino-samba/utils-2": "*"
+    "@avelino-samba/utils": "*"
   },
   "volta": {
     "node": "18.16.0",
