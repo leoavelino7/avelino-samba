@@ -7,6 +7,7 @@
     "dev": "ts-node src",
     "test": "jest",
     "build": "tsc",
+    "ci": "concurrently 'yarn prettier:check' 'yarn test' 'yarn build'",
     "prettier:check": "prettier --check 'src/**/*.(tsx|ts|json)'",
     "prettier:write": "prettier --write 'src/**/*.(tsx|ts|json)'"
   },
