@@ -17,6 +17,7 @@
   "dependencies": {
     "@my-monorepo/utils": "*",
     "@my-monorepo/utils-2": "*",
+    "@my-monorepo/tsconfig": "*",
     "@my-monorepo/lint-config": "*"
   },
   "devDependencies": {
