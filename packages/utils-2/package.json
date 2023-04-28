@@ -1,5 +1,5 @@
 {
-  "name": "@my-monorepo/utils-2",
+  "name": "@avelino-samba/utils-2",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "nodemon": "^2.0.22",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "@my-monorepo/tsconfig": "*",
-    "@my-monorepo/lint-config": "*"
+    "@avelino-samba/tsconfig": "*",
+    "@avelino-samba/lint-config": "*"
   }
 }

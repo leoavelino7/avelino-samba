@@ -1,5 +1,5 @@
-import { sub } from "@my-monorepo/utils";
-import { sum } from "@my-monorepo/utils-2";
+import { sub } from "@avelino-samba/utils";
+import { sum } from "@avelino-samba/utils-2";
 
 console.log("utils-3");
 

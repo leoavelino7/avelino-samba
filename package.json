@@ -1,5 +1,5 @@
 {
-  "name": "my-monorepo",
+  "name": "avelino-samba",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -7,10 +7,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "@my-monorepo/tsconfig": "*",
-    "@my-monorepo/lint-config": "*",
-    "@my-monorepo/utils": "*",
-    "@my-monorepo/utils-2": "*"
+    "@avelino-samba/tsconfig": "*",
+    "@avelino-samba/lint-config": "*",
+    "@avelino-samba/utils": "*",
+    "@avelino-samba/utils-2": "*"
   },
   "volta": {
     "node": "18.16.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@my-monorepo/lint-config",
+  "name": "@avelino-samba/lint-config",
   "version": "0.0.0",
   "private": "true",
   "files": [

@@ -1,5 +1,5 @@
 {
-  "extends": "@my-monorepo/tsconfig/ui-config.json",
+  "extends": "@avelino-samba/tsconfig/ui-config.json",
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

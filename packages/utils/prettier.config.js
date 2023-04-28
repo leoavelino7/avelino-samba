@@ -1,3 +1,3 @@
-const config = require("@my-monorepo/lint-config/prettier.config");
+const config = require("@avelino-samba/lint-config/prettier.config");
 
 module.exports = config;
