@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "ts-node src",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prettier:check": "prettier --check 'src/**/*.(tsx|ts|json)'",
+    "prettier:write": "prettier --write 'src/**/*.(tsx|ts|json)'"
   },
   "volta": {
     "node": "18.16.0",
@@ -18,6 +20,7 @@
     "nodemon": "^2.0.22",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "@my-monorepo/tsconfig": "*"
+    "@my-monorepo/tsconfig": "*",
+    "@my-monorepo/lint-config": "*"
   }
 }

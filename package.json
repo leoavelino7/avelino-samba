@@ -7,15 +7,17 @@
     "packages/*"
   ],
   "dependencies": {
+    "@my-monorepo/tsconfig": "*",
+    "@my-monorepo/lint-config": "*",
     "@my-monorepo/utils": "*",
-    "@my-monorepo/utils-2": "*",
-    "@my-monorepo/tsconfig": "*"
+    "@my-monorepo/utils-2": "*"
   },
   "volta": {
     "node": "18.16.0",
     "yarn": "1.22.19"
   },
   "devDependencies": {
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
   }
 }
