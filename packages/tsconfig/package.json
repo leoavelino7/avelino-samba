@@ -1,0 +1,9 @@
+{
+  "name": "@my-monorepo/tsconfig",
+  "version": "0.0.0",
+  "private": "true",
+  "files": [
+    "server-config.json",
+    "ui-config.json"
+  ]
+}

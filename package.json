@@ -8,7 +8,8 @@
   ],
   "dependencies": {
     "@my-monorepo/utils": "*",
-    "@my-monorepo/utils-2": "*"
+    "@my-monorepo/utils-2": "*",
+    "@my-monorepo/tsconfig": "*"
   },
   "volta": {
     "node": "18.16.0",

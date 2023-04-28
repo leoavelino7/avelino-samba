@@ -1,15 +1,7 @@
 {
+  "extends": "@my-monorepo/tsconfig/server-config.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "declaration": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-    ],
+    "outDir": "dist"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
