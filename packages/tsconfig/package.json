@@ -1,5 +1,5 @@
 {
-  "name": "@avelino-samba/tsconfig",
+  "name": "avelino-samba-tsconfig",
   "version": "0.0.0",
   "private": "true",
   "files": [

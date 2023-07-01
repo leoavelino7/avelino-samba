@@ -2,13 +2,16 @@ name: UI - [Lint & Build]
 
 on:
   push:
+    branches:
+      - '*'
     paths:
       - "packages/ui/**"
       - "packages/tsconfig/**"
       - "packages/lint-config/**"
       - ".github/workflows/ui-build.yml"
       - "package.json"
-
+    tags-ignore:
+      - '*'
 env:
   NODE_VERSION: 18.x
 
@@ -41,7 +44,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Dependencies
-        run: yarn workspace @avelino-samba/ui install --frozen-lockfile
+        run: yarn workspace avelino-samba-ui install --frozen-lockfile
 
   lint:
     name: "Step - Lint"
@@ -69,7 +72,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Check linting
-        run: yarn workspace @avelino-samba/ui prettier:check
+        run: yarn workspace avelino-samba-ui prettier:check
 
   build:
     name: "Step - Build"
@@ -97,4 +100,4 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Build
-        run: yarn workspace @avelino-samba/ui build
+        run: yarn workspace avelino-samba-ui build

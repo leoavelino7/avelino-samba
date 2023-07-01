@@ -1,8 +1,11 @@
 {
-  "name": "@avelino-samba/utils",
+  "name": "avelino-samba-utils",
   "version": "0.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "ts-node src",
     "test": "jest",
@@ -19,9 +22,9 @@
     "yarn": "1.22.19"
   },
   "devDependencies": {
-    "@avelino-samba/lint-config": "*",
-    "@avelino-samba/tsconfig": "*",
     "@types/jest": "^29.5.1",
+    "avelino-samba-lint-config": "*",
+    "avelino-samba-tsconfig": "*",
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
     "semver": "^7.5.1",
