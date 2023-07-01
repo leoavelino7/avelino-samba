@@ -2,13 +2,16 @@ name: Utils - [Lint, Test & Build]
 
 on:
   push:
+    branches:
+      - '*'
     paths:
       - "packages/utils/**"
       - "packages/tsconfig/**"
       - "packages/lint-config/**"
       - ".github/workflows/utils-build.yml"
       - "package.json"
-
+    tags-ignore:
+      - '*'
 env:
   NODE_VERSION: 18.x
 
@@ -42,7 +45,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Dependencies
-        run: yarn workspace @avelino-samba/utils install --frozen-lockfile
+        run: yarn workspace avelino-samba-utils install --frozen-lockfile
 
   lint:
     name: "Step - Lint"
@@ -70,7 +73,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Check linting
-        run: yarn workspace @avelino-samba/utils prettier:check
+        run: yarn workspace avelino-samba-utils prettier:check
 
   test:
     name: "Step - Test"
@@ -98,7 +101,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Check tests
-        run: yarn workspace @avelino-samba/utils test
+        run: yarn workspace avelino-samba-utils test
 
   build:
     name: "Step - Build"
@@ -126,4 +129,4 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Build
-        run: yarn workspace @avelino-samba/utils build
+        run: yarn workspace avelino-samba-utils build

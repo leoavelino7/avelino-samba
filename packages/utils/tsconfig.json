@@ -1,5 +1,5 @@
 {
-  "extends": "@avelino-samba/tsconfig/server-config.json",
+  "extends": "avelino-samba-tsconfig/server-config.json",
   "compilerOptions": {
     "outDir": "dist"
   },
