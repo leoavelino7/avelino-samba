@@ -1,6 +1,9 @@
 name: Utils Automatic - Publish Package
 
 on:
+  pull_request:
+    paths:
+      - "*"
   push:
     paths:
       - "packages/utils-automatic/**"
@@ -8,10 +11,6 @@ on:
       - "packages/lint-config/**"
       - ".github/workflows/utils-automatic-build.yml"
       - "package.json"
-    branches:
-      - "main"
-    tags-ignore:
-      - "*"
       
 env:
   NODE_VERSION: 18.x
@@ -107,6 +106,9 @@ jobs:
   build:
     name: "Step - Build"
 
+    permissions:
+          contents: read
+          packages: write
     runs-on: ubuntu-latest
 
     needs: [install]
@@ -128,36 +130,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org/
 
       - name: Build
         run: yarn workspace avelino-samba-utils-automatic build
 
-  publish:
-    name: "Publish package"
-
-    runs-on: ubuntu-latest
-
-    needs: [build, test, lint]
-
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: https://registry.npmjs.org/
-
       - name: Get last published version
+        if: ${{ steps.last-published-version.outputs.same != 'true' }}
         id: last-published-version
         run: echo ::set-output name=version::$(npm show avelino-samba-utils-automatic version)
             
       - name: Check if version is the same
+        if: ${{ steps.last-published-version.outputs.same != 'true' }}
         id: version-same
         run: |
           echo "Current version: ${{ steps.last-published-version.outputs.version }}"
@@ -173,6 +157,5 @@ jobs:
         run: |
           cd packages/utils-automatic
           echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
-          npm publish --access public --tag latest --userconfig ./.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
