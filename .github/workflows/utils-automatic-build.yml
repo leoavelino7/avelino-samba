@@ -8,7 +8,10 @@ on:
       - "packages/lint-config/**"
       - ".github/workflows/utils-automatic-build.yml"
       - "package.json"
-
+    branches-ignore:
+      - "main"
+    tags-ignore:
+      - '*'
 env:
   NODE_VERSION: 18.x
 

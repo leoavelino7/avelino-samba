@@ -1,17 +1,18 @@
 name: Utils Automatic - Publish Package
 
 on:
-  release:
-    types:
-      - created
-      - published
-      - edited
-      - prereleased
-  pull_request:
-    types:
-      - opened
-      - synchronize
-
+  push:
+    paths:
+      - "packages/utils-automatic/**"
+      - "packages/tsconfig/**"
+      - "packages/lint-config/**"
+      - ".github/workflows/utils-automatic-build.yml"
+      - "package.json"
+    branches:
+      - "main"
+    tags-ignore:
+      - "*"
+      
 env:
   NODE_VERSION: 18.x
 
