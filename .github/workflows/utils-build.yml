@@ -1,6 +1,14 @@
 name: Utils - [Lint, Test & Build]
 
 on:
+  pull_request:
+    paths:
+      - "packages/utils/**"
+      - "packages/tsconfig/**"
+      - "packages/lint-config/**"
+      - ".github/workflows/utils-build.yml"
+      - "package.json"
+
   push:
     paths:
       - "packages/utils/**"
