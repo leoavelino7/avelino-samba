@@ -1,4 +1,4 @@
-# 3.0.0
+# 3.0.1
   ## Features
     - Feature 1
     - Feature 2
