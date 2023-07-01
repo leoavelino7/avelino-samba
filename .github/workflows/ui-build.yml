@@ -2,8 +2,6 @@ name: UI - [Lint & Build]
 
 on:
   push:
-    branches:
-      - '*'
     paths:
       - "packages/ui/**"
       - "packages/tsconfig/**"
