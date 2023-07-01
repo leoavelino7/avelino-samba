@@ -1,0 +1,8 @@
+{
+  "extends": "avelino-samba-tsconfig/server-config.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
