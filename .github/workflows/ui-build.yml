@@ -1,6 +1,14 @@
 name: UI - [Lint & Build]
 
 on:
+  pull_request:
+    paths:
+      - "packages/ui/**"
+      - "packages/tsconfig/**"
+      - "packages/lint-config/**"
+      - ".github/workflows/ui-build.yml"
+      - "package.json"
+
   push:
     paths:
       - "packages/ui/**"
