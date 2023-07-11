@@ -157,5 +157,6 @@ jobs:
         run: |
           cd packages/utils-automatic
           echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+          npm publish --access public --tag latest --userconfig ./.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
